@@ -1,20 +1,21 @@
 <script>
   import { cartOpen } from "./lib/flags_stores";
-
+  import { fly } from "svelte/transition";
+  import { fade, slide } from "svelte/transition";
   const items = [{ title: "Product-1", quantity: 5, price: 99.8 }];
 
   let total = 0;
   items.forEach((item) => (total += item.quantity * item.price));
 </script>
 
-<main class="cart-l cart-s">
+<!-- transition:slide={{duration: 1000, axis: 'x'}} -->
+
+<main transition:fly={{duration:1200, x:1000}}  class="cart-l cart-s">
   <section class="cart-body-l cart-body-s">
     <div class="head-l head-s">
       <h2>Cart</h2>
       <button class="close-s close-l" on:click={() => cartOpen.set(false)}>
-        <span class="material-symbols-outlined">
-            close
-            </span>
+        <span class="material-symbols-outlined"> close </span>
       </button>
     </div>
     <div class="divider">
@@ -31,7 +32,7 @@
             <section class="numbers-l">
               <div class="quantity-l">
                 <label for="quantity">Quantity</label>
-                <input type="number" value={item.quantity}/>
+                <input type="number" value={item.quantity} />
               </div>
               <div class="price"><p>AED{item.price}</p></div>
             </section>
@@ -131,8 +132,13 @@
 
   /* Design Styles */
 
-  h1, h2, h3, p, label, input {
-    font-family: 'Cabin Condensed', sans-serif;
+  h1,
+  h2,
+  h3,
+  p,
+  label,
+  input {
+    font-family: "Cabin Condensed", sans-serif;
   }
 
   .cart-s {
