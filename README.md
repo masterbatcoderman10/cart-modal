@@ -8,3 +8,6 @@ Steps to run:
 
 Requirements:
 - Must have npm installed
+
+
+Alternatively visit : <a>https://masterbatcoderman10.github.io/cart-modal/</a>
