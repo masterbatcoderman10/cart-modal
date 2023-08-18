@@ -10,7 +10,7 @@
 
 <!-- transition:slide={{duration: 1000, axis: 'x'}} -->
 
-<main transition:fly={{duration:1200, x:1000}}  class="cart-l cart-s">
+<main transition:fly={{duration:1200, x:1000, opacity:1}}  class="cart-l cart-s">
   <section class="cart-body-l cart-body-s">
     <div class="head-l head-s">
       <h2>Cart</h2>
