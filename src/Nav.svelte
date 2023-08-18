@@ -1,5 +1,6 @@
 <script src="https://kit.fontawesome.com/7010972835.js" crossorigin="anonymous">
   import logo from "./assets/logo_test.png";
+  import { cartOpen } from "./lib/flags_stores";
 </script>
 
 <header>
@@ -15,7 +16,7 @@
     <section class="nav-items">
       <span class="material-symbols-outlined"> light_mode </span>
       <button class="contact-s btn-l btn-s">Contact</button>
-      <button class="cart-s btn-l btn-s">Cart</button>
+      <button class="cart-s btn-l btn-s" on:click={() => cartOpen.set(!$cartOpen)}>Cart</button>
     </section>
   </nav>
   <div class="grad" />

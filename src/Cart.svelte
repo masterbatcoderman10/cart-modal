@@ -1,4 +1,6 @@
 <script>
+  import { cartOpen } from "./lib/flags_stores";
+
   const items = [{ title: "Product-1", quantity: 5, price: 99.8 }];
 
   let total = 0;
@@ -9,7 +11,7 @@
   <section class="cart-body-l cart-body-s">
     <div class="head-l head-s">
       <h2>Cart</h2>
-      <button class="close-s close-l">
+      <button class="close-s close-l" on:click={() => cartOpen.set(false)}>
         <span class="material-symbols-outlined">
             close
             </span>
